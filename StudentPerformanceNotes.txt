@@ -1,0 +1,26 @@
+-- Hours Studied vs Exam Score
+SELECT Hours_Studied, AVG(Exam_Score) AS avg_score
+FROM StudentPerformanceWorkbook
+GROUP BY Hours_Studied
+ORDER BY Hours_Studied;
+(score was higher with more hours studied)
+
+-- Sleep Hours vs Exam Score
+SELECT Sleep_Hours, AVG(Exam_Score) AS avg_score
+FROM students
+GROUP BY Sleep_Hours
+ORDER BY Sleep_Hours;
+(not much difference between different hours of sleep)
+
+-- Motivation Level vs Exam Score
+SELECT Motivation_Level, AVG(Exam_Score) AS avg_score
+FROM students
+GROUP BY Motivation_Level
+ORDER BY Motivation_Level;
+(score was highest slightly with high motivational levels)
+
+-- Access to Resources vs Exam Score
+SELECT Access_to_Resources, AVG(Exam_Score) AS avg_score
+FROM students
+GROUP BY Access_to_Resources;
+(score was highest slightly with high access to resources)
